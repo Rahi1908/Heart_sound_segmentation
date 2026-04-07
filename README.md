@@ -1,10 +1,10 @@
-# 🫀 Noise-Robust Heart Sound Segmentation
+#  Noise-Robust Heart Sound Segmentation
 
 > A Python implementation of the Shannon Energy-based Heart Sound Segmentation algorithm from **"A Noise-Robust Algorithm for Heart Sound Segmentation"** (Arjoune et al.), deployed in the **StethAid** iOS app for pediatric auscultation.
 
 ---
 
-## 📌 Table of Contents
+##  Table of Contents
 
 - [Overview](#overview)
 - [Pipeline Architecture](#pipeline-architecture)
@@ -26,11 +26,11 @@ Heart disease is the leading cause of death worldwide. Doctors use a stethoscope
 - **S2 (dub)** — marks the beginning of diastole
 
 Unlike deep learning approaches, this algorithm is:
-- ✅ Fully interpretable (no black box)
-- ✅ Computationally efficient (runs in real time on a smartphone)
-- ✅ Does not require ECG simultaneously
-- ✅ Works across different stethoscopes
-- ✅ Requires no large training dataset
+-  Fully interpretable (no black box)
+-  Computationally efficient (runs in real time on a smartphone)
+-  Does not require ECG simultaneously
+-  Works across different stethoscopes
+-  Requires no large training dataset
 
 ---
 
@@ -255,7 +255,7 @@ The paper's 0.28 ms accuracy was measured on the full **797-recording CirCor dat
 2. **Accuracy differs** (4ms vs 0.28ms) — this reflects the Shannon energy hop size; a smaller hop gives finer time resolution and lower ms error
 3. To replicate the paper's exact numbers, test on the full CirCor dataset from [PhysioNet](https://physionet.org/content/circor-heart-sound/1.0.3/)
 
-### S2 Sensitivity beats the paper ✅
+### S2 Sensitivity beats the paper 
 
 Achieving **100% S2 sensitivity** on the test recording, compared to the paper's 97.22%, shows the S2 detection is performing excellently.
 
@@ -293,3 +293,8 @@ Two datasets were used in the original paper:
 ## License
 
 This project is for educational and research purposes, implementing the algorithm described in the above paper.
+
+
+## Teammates
+Rahi Pakhale (241EC139)
+Divya Keerthi (241EC118)
