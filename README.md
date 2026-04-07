@@ -287,7 +287,8 @@ Two datasets were used in the original paper:
 
 - PhysioNet CirCor DigiScope Dataset: https://physionet.org/content/circor-heart-sound/1.0.3/
 - StethAid iOS App: Available on the Apple App Store
-
+- 
+ Research paper used : https://doi.org/10.1109/access.2024.3351570 
 ---
 
 ## License
