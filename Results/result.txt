@@ -1,0 +1,742 @@
+Loaded: heart_sound.wav
+Sampling Rate : 4000 Hz
+Duration      : 8.88 seconds
+Total Samples : 35537
+Valid signal: Duration = 8.88 seconds
+Bandpass filter applied: 40 Hz - 500 Hz
+Signal normalized to [-1, 1]. Max value was: 0.0999
+✅ Step 1 PASSED — sr=4000, samples=35537, valid=True
+
+--- Computing Shannon Energy Envelope ---
+Window size   : 20 ms = 80 samples
+Hop size      : 40 samples (50% overlap)
+ASE computed  : 887 frames
+ASE mean      : -0.000134
+NASE range    : [-0.1046, 0.1021]
+Threshold for lobe detection: 0.0
+Total sound lobes found: 216
+Shannon envelope pipeline complete.
+Step 2 returns 4 values
+✅ Step 2 PASSED — lobes found=216
+
+====== Noisy Lobe Detection Pipeline ======
+
+--- Computing Lobe Areas ---
+Total lobes         : 216
+Min lobe area       : 0.0000
+Max lobe area       : 0.2052
+Mean lobe area      : 0.0209
+Std lobe area       : 0.0300
+
+--- Computing Z-Scores ---
+Number of lobes (M) : 216
+Mean area (A_mean)  : 0.0209
+Std deviation       : 0.0300
+Min z-score         : -0.6972
+Max z-score         : 6.1527
+
+--- Identifying Noisy Lobes (cutoff = 2.75) ---
+Total lobes         : 216
+Clean lobes         : 209
+Noisy lobes         : 7
+
+Noisy Lobe Details:
+#     Start(s)     End(s)       Area         Z-Score   
+---------------------------------------------------
+1     4.370        4.390        0.1037       2.7633    
+2     5.420        5.440        0.1033       2.7527    
+3     7.290        7.350        0.1440       4.1103    
+4     7.890        7.920        0.1458       4.1703    
+5     8.030        8.060        0.1466       4.1984    
+6     8.220        8.270        0.2052       6.1527    
+7     8.750        8.800        0.1259       3.5042    
+
+--- Extracting Clean Intervals (min duration = 3.0s) ---
+Clean intervals kept (>= 3.0s): 1
+  Interval 1: 0.00s → 4.37s (4.37s)
+✅ Step 3 PASSED — clean lobes=209, noisy=7, intervals=1
+
+====== Lobe Validation Pipeline ======
+
+--- Duration Filter (max = 250ms) ---
+Input lobes         : 209
+Valid lobes         : 209
+Rejected lobes      : 0 (duration > 250ms)
+
+--- Split Sound Handler (max gap=50ms, rms_ratio=0.4) ---
+  Similar energy lobes at 0.030s → kept both as candidates
+  Similar energy lobes at 0.070s → kept both as candidates
+  Similar energy lobes at 0.090s → kept both as candidates
+  Similar energy lobes at 0.130s → kept both as candidates
+  Similar energy lobes at 0.160s → kept both as candidates
+  Similar energy lobes at 0.200s → kept both as candidates
+  Similar energy lobes at 0.250s → kept both as candidates
+  Similar energy lobes at 0.290s → kept both as candidates
+  Similar energy lobes at 0.320s → kept both as candidates
+  Similar energy lobes at 0.350s → kept both as candidates
+  Similar energy lobes at 0.380s → kept both as candidates
+  Similar energy lobes at 0.430s → kept both as candidates
+  Similar energy lobes at 0.450s → kept both as candidates
+  Similar energy lobes at 0.480s → kept both as candidates
+  Similar energy lobes at 0.500s → kept both as candidates
+  Similar energy lobes at 0.530s → kept both as candidates
+  Similar energy lobes at 0.580s → kept both as candidates
+  Similar energy lobes at 0.630s → kept both as candidates
+  Similar energy lobes at 0.660s → kept both as candidates
+  Similar energy lobes at 0.710s → kept both as candidates
+  Similar energy lobes at 0.740s → kept both as candidates
+  Similar energy lobes at 0.800s → kept both as candidates
+  Similar energy lobes at 0.830s → kept both as candidates
+  Similar energy lobes at 0.850s → kept both as candidates
+  Similar energy lobes at 0.890s → kept both as candidates
+  Similar energy lobes at 0.920s → kept both as candidates
+  Similar energy lobes at 0.990s → kept both as candidates
+  Similar energy lobes at 1.040s → kept both as candidates
+  Similar energy lobes at 1.070s → kept both as candidates
+  Similar energy lobes at 1.100s → kept both as candidates
+  Similar energy lobes at 1.130s → kept both as candidates
+  Similar energy lobes at 1.160s → kept both as candidates
+  Similar energy lobes at 1.200s → kept both as candidates
+  Similar energy lobes at 1.240s → kept both as candidates
+  Similar energy lobes at 1.290s → kept both as candidates
+  Similar energy lobes at 1.320s → kept both as candidates
+  Similar energy lobes at 1.380s → kept both as candidates
+  Similar energy lobes at 1.430s → kept both as candidates
+  Similar energy lobes at 1.460s → kept both as candidates
+  Similar energy lobes at 1.480s → kept both as candidates
+  Similar energy lobes at 1.510s → kept both as candidates
+  Similar energy lobes at 1.550s → kept both as candidates
+  Similar energy lobes at 1.610s → kept both as candidates
+  Similar energy lobes at 1.720s → kept both as candidates
+  Similar energy lobes at 1.750s → kept both as candidates
+  Similar energy lobes at 1.780s → kept both as candidates
+  Similar energy lobes at 1.820s → kept both as candidates
+  Similar energy lobes at 1.850s → kept both as candidates
+  Similar energy lobes at 1.900s → kept both as candidates
+  Similar energy lobes at 1.930s → kept both as candidates
+  Similar energy lobes at 1.950s → kept both as candidates
+  Similar energy lobes at 1.980s → kept both as candidates
+  Similar energy lobes at 2.020s → kept both as candidates
+  Similar energy lobes at 2.080s → kept both as candidates
+  Similar energy lobes at 2.120s → kept both as candidates
+  Similar energy lobes at 2.190s → kept both as candidates
+  Similar energy lobes at 2.240s → kept both as candidates
+  Similar energy lobes at 2.300s → kept both as candidates
+  Similar energy lobes at 2.340s → kept both as candidates
+  Similar energy lobes at 2.390s → kept both as candidates
+  Similar energy lobes at 2.440s → kept both as candidates
+  Similar energy lobes at 2.490s → kept both as candidates
+  Similar energy lobes at 2.510s → kept both as candidates
+  Similar energy lobes at 2.550s → kept both as candidates
+  Similar energy lobes at 2.590s → kept both as candidates
+  Similar energy lobes at 2.620s → kept both as candidates
+  Similar energy lobes at 2.640s → kept both as candidates
+  Similar energy lobes at 2.670s → kept both as candidates
+  Similar energy lobes at 2.710s → kept both as candidates
+  Similar energy lobes at 2.750s → kept both as candidates
+  Similar energy lobes at 2.780s → kept both as candidates
+  Similar energy lobes at 2.810s → kept both as candidates
+  Similar energy lobes at 2.890s → kept both as candidates
+  Similar energy lobes at 2.920s → kept both as candidates
+  Similar energy lobes at 2.960s → kept both as candidates
+  Similar energy lobes at 3.000s → kept both as candidates
+  Similar energy lobes at 3.070s → kept both as candidates
+  Similar energy lobes at 3.100s → kept both as candidates
+  Similar energy lobes at 3.220s → kept both as candidates
+  Similar energy lobes at 3.250s → kept both as candidates
+  Similar energy lobes at 3.290s → kept both as candidates
+  Similar energy lobes at 3.320s → kept both as candidates
+  Similar energy lobes at 3.370s → kept both as candidates
+  Similar energy lobes at 3.400s → kept both as candidates
+  Similar energy lobes at 3.420s → kept both as candidates
+  Similar energy lobes at 3.450s → kept both as candidates
+  Similar energy lobes at 3.480s → kept both as candidates
+  Similar energy lobes at 3.510s → kept both as candidates
+  Similar energy lobes at 3.540s → kept both as candidates
+  Similar energy lobes at 3.560s → kept both as candidates
+  Similar energy lobes at 3.610s → kept both as candidates
+  Similar energy lobes at 3.640s → kept both as candidates
+  Similar energy lobes at 3.700s → kept both as candidates
+  Similar energy lobes at 3.760s → kept both as candidates
+  Similar energy lobes at 3.810s → kept both as candidates
+  Similar energy lobes at 3.870s → kept both as candidates
+  Similar energy lobes at 3.930s → kept both as candidates
+  Similar energy lobes at 3.990s → kept both as candidates
+  Similar energy lobes at 4.010s → kept both as candidates
+  Similar energy lobes at 4.040s → kept both as candidates
+  Similar energy lobes at 4.090s → kept both as candidates
+  Similar energy lobes at 4.110s → kept both as candidates
+  Similar energy lobes at 4.160s → kept both as candidates
+  Similar energy lobes at 4.190s → kept both as candidates
+  Similar energy lobes at 4.240s → kept both as candidates
+  Similar energy lobes at 4.280s → kept both as candidates
+  Similar energy lobes at 4.320s → kept both as candidates
+  Similar energy lobes at 4.350s → kept both as candidates
+  Similar energy lobes at 4.410s → kept both as candidates
+  Similar energy lobes at 4.440s → kept both as candidates
+  Similar energy lobes at 4.490s → kept both as candidates
+  Similar energy lobes at 4.520s → kept both as candidates
+  Similar energy lobes at 4.560s → kept both as candidates
+  Similar energy lobes at 4.630s → kept both as candidates
+  Similar energy lobes at 4.680s → kept both as candidates
+  Similar energy lobes at 4.710s → kept both as candidates
+  Similar energy lobes at 4.730s → kept both as candidates
+  Similar energy lobes at 4.760s → kept both as candidates
+  Similar energy lobes at 4.800s → kept both as candidates
+  Similar energy lobes at 4.850s → kept both as candidates
+  Similar energy lobes at 4.880s → kept both as candidates
+  Similar energy lobes at 4.900s → kept both as candidates
+  Similar energy lobes at 5.000s → kept both as candidates
+  Similar energy lobes at 5.050s → kept both as candidates
+  Similar energy lobes at 5.100s → kept both as candidates
+  Similar energy lobes at 5.130s → kept both as candidates
+  Similar energy lobes at 5.150s → kept both as candidates
+  Similar energy lobes at 5.200s → kept both as candidates
+  Similar energy lobes at 5.240s → kept both as candidates
+  Similar energy lobes at 5.280s → kept both as candidates
+  Similar energy lobes at 5.320s → kept both as candidates
+  Similar energy lobes at 5.350s → kept both as candidates
+  Similar energy lobes at 5.460s → kept both as candidates
+  Similar energy lobes at 5.500s → kept both as candidates
+  Similar energy lobes at 5.530s → kept both as candidates
+  Similar energy lobes at 5.560s → kept both as candidates
+  Similar energy lobes at 5.590s → kept both as candidates
+  Similar energy lobes at 5.620s → kept both as candidates
+  Similar energy lobes at 5.650s → kept both as candidates
+  Similar energy lobes at 5.700s → kept both as candidates
+  Similar energy lobes at 5.760s → kept both as candidates
+  Similar energy lobes at 5.790s → kept both as candidates
+  Similar energy lobes at 5.820s → kept both as candidates
+  Similar energy lobes at 5.860s → kept both as candidates
+  Similar energy lobes at 5.890s → kept both as candidates
+  Similar energy lobes at 5.910s → kept both as candidates
+  Similar energy lobes at 5.940s → kept both as candidates
+  Similar energy lobes at 5.990s → kept both as candidates
+  Similar energy lobes at 6.040s → kept both as candidates
+  Similar energy lobes at 6.110s → kept both as candidates
+  Similar energy lobes at 6.150s → kept both as candidates
+  Similar energy lobes at 6.200s → kept both as candidates
+  Similar energy lobes at 6.240s → kept both as candidates
+  Similar energy lobes at 6.290s → kept both as candidates
+  Similar energy lobes at 6.320s → kept both as candidates
+  Similar energy lobes at 6.360s → kept both as candidates
+  Similar energy lobes at 6.390s → kept both as candidates
+  Similar energy lobes at 6.440s → kept both as candidates
+  Similar energy lobes at 6.470s → kept both as candidates
+  Similar energy lobes at 6.540s → kept both as candidates
+  Similar energy lobes at 6.570s → kept both as candidates
+  Similar energy lobes at 6.630s → kept both as candidates
+  Similar energy lobes at 6.670s → kept both as candidates
+  Similar energy lobes at 6.700s → kept both as candidates
+  Similar energy lobes at 6.720s → kept both as candidates
+  Similar energy lobes at 6.760s → kept both as candidates
+  Similar energy lobes at 6.800s → kept both as candidates
+  Similar energy lobes at 6.840s → kept both as candidates
+  Similar energy lobes at 6.860s → kept both as candidates
+  Similar energy lobes at 6.910s → kept both as candidates
+  Similar energy lobes at 6.950s → kept both as candidates
+  Similar energy lobes at 7.010s → kept both as candidates
+  Similar energy lobes at 7.060s → kept both as candidates
+  Similar energy lobes at 7.090s → kept both as candidates
+  Similar energy lobes at 7.120s → kept both as candidates
+  Similar energy lobes at 7.160s → kept both as candidates
+  Similar energy lobes at 7.210s → kept both as candidates
+  Similar energy lobes at 7.230s → kept both as candidates
+  Similar energy lobes at 7.390s → kept both as candidates
+  Similar energy lobes at 7.430s → kept both as candidates
+  Similar energy lobes at 7.460s → kept both as candidates
+  Similar energy lobes at 7.500s → kept both as candidates
+  Similar energy lobes at 7.560s → kept both as candidates
+  Similar energy lobes at 7.660s → kept both as candidates
+  Similar energy lobes at 7.720s → kept both as candidates
+  Similar energy lobes at 7.750s → kept both as candidates
+  Similar energy lobes at 7.780s → kept both as candidates
+  Similar energy lobes at 7.940s → kept both as candidates
+  Similar energy lobes at 8.080s → kept both as candidates
+  Similar energy lobes at 8.140s → kept both as candidates
+  Similar energy lobes at 8.290s → kept both as candidates
+  Similar energy lobes at 8.350s → kept both as candidates
+  Similar energy lobes at 8.390s → kept both as candidates
+  Similar energy lobes at 8.430s → kept both as candidates
+  Similar energy lobes at 8.450s → kept both as candidates
+  Similar energy lobes at 8.500s → kept both as candidates
+  Similar energy lobes at 8.570s → kept both as candidates
+  Similar energy lobes at 8.610s → kept both as candidates
+  Similar energy lobes at 8.670s → kept both as candidates
+  Similar energy lobes at 8.810s → kept both as candidates
+Lobes after split handling: 209
+
+--- Computing Inter-Lobe Intervals ---
+Number of intervals : 208
+Min interval        : 10.0 ms
+Max interval        : 110.0 ms
+Mean interval       : 22.2 ms
+
+--- Estimating Heart Rate ---
+Median inter-lobe interval : 20.0 ms
+Estimated cardiac cycle    : 40.0 ms
+Estimated heart rate       : 1500.0 bpm
+Warning: Estimated HR 1500.0 bpm is outside physiological range!
+
+Validation complete.
+Final candidate lobes : 209
+✅ Step 4 PASSED — validated=209, HR=0.0 bpm
+
+====== S1/S2 Identification Pipeline ======
+
+--- Finding Initial S1-S2 Pair ---
+Longest interval    : 110.0ms at index 181
+Initial S1          : 7.230s → 7.240s
+Initial S2          : 7.260s → 7.280s
+Systolic interval   : 20.0ms
+
+--- Propagating Forward ---
+Forward S1 found    : 11
+Forward S2 found    : 11
+
+--- Propagating Backward ---
+Backward S1 found   : 54
+Backward S2 found   : 54
+
+Final Results:
+Total S1 identified : 65
+Total S2 identified : 65
+✅ Step 5 PASSED — S1=65, S2=65
+
+=======================================================
+  NOISE-ROBUST HEART SOUND SEGMENTATION
+  Based on Shannon Energy (Arjoune et al.)
+=======================================================
+Loaded: heart_sound.wav
+Sampling Rate : 4000 Hz
+Duration      : 8.88 seconds
+Total Samples : 35537
+Valid signal: Duration = 8.88 seconds
+Bandpass filter applied: 40 Hz - 500 Hz
+Signal normalized to [-1, 1]. Max value was: 0.0999
+
+--- Computing Shannon Energy Envelope ---
+Window size   : 20 ms = 80 samples
+Hop size      : 40 samples (50% overlap)
+ASE computed  : 887 frames
+ASE mean      : -0.000134
+NASE range    : [-0.1046, 0.1021]
+Threshold for lobe detection: 0.0
+Total sound lobes found: 216
+Shannon envelope pipeline complete.
+
+====== Noisy Lobe Detection Pipeline ======
+
+--- Computing Lobe Areas ---
+Total lobes         : 216
+Min lobe area       : 0.0000
+Max lobe area       : 0.2052
+Mean lobe area      : 0.0209
+Std lobe area       : 0.0300
+
+--- Computing Z-Scores ---
+Number of lobes (M) : 216
+Mean area (A_mean)  : 0.0209
+Std deviation       : 0.0300
+Min z-score         : -0.6972
+Max z-score         : 6.1527
+
+--- Identifying Noisy Lobes (cutoff = 2.75) ---
+Total lobes         : 216
+Clean lobes         : 209
+Noisy lobes         : 7
+
+Noisy Lobe Details:
+#     Start(s)     End(s)       Area         Z-Score   
+---------------------------------------------------
+1     4.370        4.390        0.1037       2.7633    
+2     5.420        5.440        0.1033       2.7527    
+3     7.290        7.350        0.1440       4.1103    
+4     7.890        7.920        0.1458       4.1703    
+5     8.030        8.060        0.1466       4.1984    
+6     8.220        8.270        0.2052       6.1527    
+7     8.750        8.800        0.1259       3.5042    
+
+--- Extracting Clean Intervals (min duration = 3.0s) ---
+Clean intervals kept (>= 3.0s): 1
+  Interval 1: 0.00s → 4.37s (4.37s)
+
+====== Lobe Validation Pipeline ======
+
+--- Duration Filter (max = 250ms) ---
+Input lobes         : 209
+Valid lobes         : 209
+Rejected lobes      : 0 (duration > 250ms)
+
+--- Split Sound Handler (max gap=50ms, rms_ratio=0.4) ---
+  Similar energy lobes at 0.030s → kept both as candidates
+  Similar energy lobes at 0.070s → kept both as candidates
+  Similar energy lobes at 0.090s → kept both as candidates
+  Similar energy lobes at 0.130s → kept both as candidates
+  Similar energy lobes at 0.160s → kept both as candidates
+  Similar energy lobes at 0.200s → kept both as candidates
+  Similar energy lobes at 0.250s → kept both as candidates
+  Similar energy lobes at 0.290s → kept both as candidates
+  Similar energy lobes at 0.320s → kept both as candidates
+  Similar energy lobes at 0.350s → kept both as candidates
+  Similar energy lobes at 0.380s → kept both as candidates
+  Similar energy lobes at 0.430s → kept both as candidates
+  Similar energy lobes at 0.450s → kept both as candidates
+  Similar energy lobes at 0.480s → kept both as candidates
+  Similar energy lobes at 0.500s → kept both as candidates
+  Similar energy lobes at 0.530s → kept both as candidates
+  Similar energy lobes at 0.580s → kept both as candidates
+  Similar energy lobes at 0.630s → kept both as candidates
+  Similar energy lobes at 0.660s → kept both as candidates
+  Similar energy lobes at 0.710s → kept both as candidates
+  Similar energy lobes at 0.740s → kept both as candidates
+  Similar energy lobes at 0.800s → kept both as candidates
+  Similar energy lobes at 0.830s → kept both as candidates
+  Similar energy lobes at 0.850s → kept both as candidates
+  Similar energy lobes at 0.890s → kept both as candidates
+  Similar energy lobes at 0.920s → kept both as candidates
+  Similar energy lobes at 0.990s → kept both as candidates
+  Similar energy lobes at 1.040s → kept both as candidates
+  Similar energy lobes at 1.070s → kept both as candidates
+  Similar energy lobes at 1.100s → kept both as candidates
+  Similar energy lobes at 1.130s → kept both as candidates
+  Similar energy lobes at 1.160s → kept both as candidates
+  Similar energy lobes at 1.200s → kept both as candidates
+  Similar energy lobes at 1.240s → kept both as candidates
+  Similar energy lobes at 1.290s → kept both as candidates
+  Similar energy lobes at 1.320s → kept both as candidates
+  Similar energy lobes at 1.380s → kept both as candidates
+  Similar energy lobes at 1.430s → kept both as candidates
+  Similar energy lobes at 1.460s → kept both as candidates
+  Similar energy lobes at 1.480s → kept both as candidates
+  Similar energy lobes at 1.510s → kept both as candidates
+  Similar energy lobes at 1.550s → kept both as candidates
+  Similar energy lobes at 1.610s → kept both as candidates
+  Similar energy lobes at 1.720s → kept both as candidates
+  Similar energy lobes at 1.750s → kept both as candidates
+  Similar energy lobes at 1.780s → kept both as candidates
+  Similar energy lobes at 1.820s → kept both as candidates
+  Similar energy lobes at 1.850s → kept both as candidates
+  Similar energy lobes at 1.900s → kept both as candidates
+  Similar energy lobes at 1.930s → kept both as candidates
+  Similar energy lobes at 1.950s → kept both as candidates
+  Similar energy lobes at 1.980s → kept both as candidates
+  Similar energy lobes at 2.020s → kept both as candidates
+  Similar energy lobes at 2.080s → kept both as candidates
+  Similar energy lobes at 2.120s → kept both as candidates
+  Similar energy lobes at 2.190s → kept both as candidates
+  Similar energy lobes at 2.240s → kept both as candidates
+  Similar energy lobes at 2.300s → kept both as candidates
+  Similar energy lobes at 2.340s → kept both as candidates
+  Similar energy lobes at 2.390s → kept both as candidates
+  Similar energy lobes at 2.440s → kept both as candidates
+  Similar energy lobes at 2.490s → kept both as candidates
+  Similar energy lobes at 2.510s → kept both as candidates
+  Similar energy lobes at 2.550s → kept both as candidates
+  Similar energy lobes at 2.590s → kept both as candidates
+  Similar energy lobes at 2.620s → kept both as candidates
+  Similar energy lobes at 2.640s → kept both as candidates
+  Similar energy lobes at 2.670s → kept both as candidates
+  Similar energy lobes at 2.710s → kept both as candidates
+  Similar energy lobes at 2.750s → kept both as candidates
+  Similar energy lobes at 2.780s → kept both as candidates
+  Similar energy lobes at 2.810s → kept both as candidates
+  Similar energy lobes at 2.890s → kept both as candidates
+  Similar energy lobes at 2.920s → kept both as candidates
+  Similar energy lobes at 2.960s → kept both as candidates
+  Similar energy lobes at 3.000s → kept both as candidates
+  Similar energy lobes at 3.070s → kept both as candidates
+  Similar energy lobes at 3.100s → kept both as candidates
+  Similar energy lobes at 3.220s → kept both as candidates
+  Similar energy lobes at 3.250s → kept both as candidates
+  Similar energy lobes at 3.290s → kept both as candidates
+  Similar energy lobes at 3.320s → kept both as candidates
+  Similar energy lobes at 3.370s → kept both as candidates
+  Similar energy lobes at 3.400s → kept both as candidates
+  Similar energy lobes at 3.420s → kept both as candidates
+  Similar energy lobes at 3.450s → kept both as candidates
+  Similar energy lobes at 3.480s → kept both as candidates
+  Similar energy lobes at 3.510s → kept both as candidates
+  Similar energy lobes at 3.540s → kept both as candidates
+  Similar energy lobes at 3.560s → kept both as candidates
+  Similar energy lobes at 3.610s → kept both as candidates
+  Similar energy lobes at 3.640s → kept both as candidates
+  Similar energy lobes at 3.700s → kept both as candidates
+  Similar energy lobes at 3.760s → kept both as candidates
+  Similar energy lobes at 3.810s → kept both as candidates
+  Similar energy lobes at 3.870s → kept both as candidates
+  Similar energy lobes at 3.930s → kept both as candidates
+  Similar energy lobes at 3.990s → kept both as candidates
+  Similar energy lobes at 4.010s → kept both as candidates
+  Similar energy lobes at 4.040s → kept both as candidates
+  Similar energy lobes at 4.090s → kept both as candidates
+  Similar energy lobes at 4.110s → kept both as candidates
+  Similar energy lobes at 4.160s → kept both as candidates
+  Similar energy lobes at 4.190s → kept both as candidates
+  Similar energy lobes at 4.240s → kept both as candidates
+  Similar energy lobes at 4.280s → kept both as candidates
+  Similar energy lobes at 4.320s → kept both as candidates
+  Similar energy lobes at 4.350s → kept both as candidates
+  Similar energy lobes at 4.410s → kept both as candidates
+  Similar energy lobes at 4.440s → kept both as candidates
+  Similar energy lobes at 4.490s → kept both as candidates
+  Similar energy lobes at 4.520s → kept both as candidates
+  Similar energy lobes at 4.560s → kept both as candidates
+  Similar energy lobes at 4.630s → kept both as candidates
+  Similar energy lobes at 4.680s → kept both as candidates
+  Similar energy lobes at 4.710s → kept both as candidates
+  Similar energy lobes at 4.730s → kept both as candidates
+  Similar energy lobes at 4.760s → kept both as candidates
+  Similar energy lobes at 4.800s → kept both as candidates
+  Similar energy lobes at 4.850s → kept both as candidates
+  Similar energy lobes at 4.880s → kept both as candidates
+  Similar energy lobes at 4.900s → kept both as candidates
+  Similar energy lobes at 5.000s → kept both as candidates
+  Similar energy lobes at 5.050s → kept both as candidates
+  Similar energy lobes at 5.100s → kept both as candidates
+  Similar energy lobes at 5.130s → kept both as candidates
+  Similar energy lobes at 5.150s → kept both as candidates
+  Similar energy lobes at 5.200s → kept both as candidates
+  Similar energy lobes at 5.240s → kept both as candidates
+  Similar energy lobes at 5.280s → kept both as candidates
+  Similar energy lobes at 5.320s → kept both as candidates
+  Similar energy lobes at 5.350s → kept both as candidates
+  Similar energy lobes at 5.460s → kept both as candidates
+  Similar energy lobes at 5.500s → kept both as candidates
+  Similar energy lobes at 5.530s → kept both as candidates
+  Similar energy lobes at 5.560s → kept both as candidates
+  Similar energy lobes at 5.590s → kept both as candidates
+  Similar energy lobes at 5.620s → kept both as candidates
+  Similar energy lobes at 5.650s → kept both as candidates
+  Similar energy lobes at 5.700s → kept both as candidates
+  Similar energy lobes at 5.760s → kept both as candidates
+  Similar energy lobes at 5.790s → kept both as candidates
+  Similar energy lobes at 5.820s → kept both as candidates
+  Similar energy lobes at 5.860s → kept both as candidates
+  Similar energy lobes at 5.890s → kept both as candidates
+  Similar energy lobes at 5.910s → kept both as candidates
+  Similar energy lobes at 5.940s → kept both as candidates
+  Similar energy lobes at 5.990s → kept both as candidates
+  Similar energy lobes at 6.040s → kept both as candidates
+  Similar energy lobes at 6.110s → kept both as candidates
+  Similar energy lobes at 6.150s → kept both as candidates
+  Similar energy lobes at 6.200s → kept both as candidates
+  Similar energy lobes at 6.240s → kept both as candidates
+  Similar energy lobes at 6.290s → kept both as candidates
+  Similar energy lobes at 6.320s → kept both as candidates
+  Similar energy lobes at 6.360s → kept both as candidates
+  Similar energy lobes at 6.390s → kept both as candidates
+  Similar energy lobes at 6.440s → kept both as candidates
+  Similar energy lobes at 6.470s → kept both as candidates
+  Similar energy lobes at 6.540s → kept both as candidates
+  Similar energy lobes at 6.570s → kept both as candidates
+  Similar energy lobes at 6.630s → kept both as candidates
+  Similar energy lobes at 6.670s → kept both as candidates
+  Similar energy lobes at 6.700s → kept both as candidates
+  Similar energy lobes at 6.720s → kept both as candidates
+  Similar energy lobes at 6.760s → kept both as candidates
+  Similar energy lobes at 6.800s → kept both as candidates
+  Similar energy lobes at 6.840s → kept both as candidates
+  Similar energy lobes at 6.860s → kept both as candidates
+  Similar energy lobes at 6.910s → kept both as candidates
+  Similar energy lobes at 6.950s → kept both as candidates
+  Similar energy lobes at 7.010s → kept both as candidates
+  Similar energy lobes at 7.060s → kept both as candidates
+  Similar energy lobes at 7.090s → kept both as candidates
+  Similar energy lobes at 7.120s → kept both as candidates
+  Similar energy lobes at 7.160s → kept both as candidates
+  Similar energy lobes at 7.210s → kept both as candidates
+  Similar energy lobes at 7.230s → kept both as candidates
+  Similar energy lobes at 7.390s → kept both as candidates
+  Similar energy lobes at 7.430s → kept both as candidates
+  Similar energy lobes at 7.460s → kept both as candidates
+  Similar energy lobes at 7.500s → kept both as candidates
+  Similar energy lobes at 7.560s → kept both as candidates
+  Similar energy lobes at 7.660s → kept both as candidates
+  Similar energy lobes at 7.720s → kept both as candidates
+  Similar energy lobes at 7.750s → kept both as candidates
+  Similar energy lobes at 7.780s → kept both as candidates
+  Similar energy lobes at 7.940s → kept both as candidates
+  Similar energy lobes at 8.080s → kept both as candidates
+  Similar energy lobes at 8.140s → kept both as candidates
+  Similar energy lobes at 8.290s → kept both as candidates
+  Similar energy lobes at 8.350s → kept both as candidates
+  Similar energy lobes at 8.390s → kept both as candidates
+  Similar energy lobes at 8.430s → kept both as candidates
+  Similar energy lobes at 8.450s → kept both as candidates
+  Similar energy lobes at 8.500s → kept both as candidates
+  Similar energy lobes at 8.570s → kept both as candidates
+  Similar energy lobes at 8.610s → kept both as candidates
+  Similar energy lobes at 8.670s → kept both as candidates
+  Similar energy lobes at 8.810s → kept both as candidates
+Lobes after split handling: 209
+
+--- Computing Inter-Lobe Intervals ---
+Number of intervals : 208
+Min interval        : 10.0 ms
+Max interval        : 110.0 ms
+Mean interval       : 22.2 ms
+
+--- Estimating Heart Rate ---
+Median inter-lobe interval : 20.0 ms
+Estimated cardiac cycle    : 40.0 ms
+Estimated heart rate       : 1500.0 bpm
+Warning: Estimated HR 1500.0 bpm is outside physiological range!
+
+Validation complete.
+Final candidate lobes : 209
+
+====== S1/S2 Identification Pipeline ======
+
+--- Finding Initial S1-S2 Pair ---
+Longest interval    : 110.0ms at index 181
+Initial S1          : 7.230s → 7.240s
+Initial S2          : 7.260s → 7.280s
+Systolic interval   : 20.0ms
+
+--- Propagating Forward ---
+Forward S1 found    : 11
+Forward S2 found    : 11
+
+--- Propagating Backward ---
+Backward S1 found   : 54
+Backward S2 found   : 54
+
+Final Results:
+Total S1 identified : 65
+Total S2 identified : 65
+
+====== Full Evaluation Pipeline ======
+
+No annotation file provided.
+Using dummy ground truth for demonstration.
+
+--- Creating Dummy Ground Truth (noise=5.0ms) ---
+Dummy GT S1 count   : 65
+Dummy GT S2 count   : 65
+
+=======================================================
+  EVALUATION REPORT: heart_sound
+=======================================================
+
+--- Computing Accuracy for S1 ---
+Predictions         : 65
+Ground truth        : 65
+Mean accuracy       : 4.0590 ms (+/- 2.8103 ms)
+Good accuracy       : < 5ms error
+
+--- Computing Accuracy for S2 ---
+Predictions         : 65
+Ground truth        : 65
+Mean accuracy       : 3.7486 ms (+/- 2.5590 ms)
+Good accuracy       : < 5ms error
+
+--- Computing Sensitivity ---
+
+S1 Results:
+  TP                : 62
+  FN                : 3
+  Sensitivity       : 95.38%
+
+S2 Results:
+  TP                : 63
+  FN                : 2
+  Sensitivity       : 96.92%
+
+Overall Sensitivity : 96.15%
+Performance         : Good (>= 90%)
+
+--- Computing Segmentation Success ---
+Total candidates    : 209
+S1 identified       : 65
+S2 identified       : 65
+Complete pairs      : 65
+Coverage            : 62.2%
+Segmentation        : SUCCESS
+
+───────────────────────────────────────────────────────
+  COMPARISON WITH PAPER BENCHMARKS
+───────────────────────────────────────────────────────
+Metric                         Yours           Paper          
+───────────────────────────────────────────────────────
+S1 Accuracy (ms)               4.0590                     0.28
+S2 Accuracy (ms)               3.7486                     0.29
+Overall Sensitivity (%)        96.15                     97.44
+S1 Sensitivity (%)             95.38           97.22 (murmur present)
+S2 Sensitivity (%)             96.92           97.22 (murmur present)
+───────────────────────────────────────────────────────
+
+Dashboard saved as: segmentation_report_heart_sound.png
+
+
+=======================================================
+  PIPELINE COMPLETE
+=======================================================
+
+✅ Text report saved as segmentation_report_heart_sound.txt
+
+====== Full Evaluation Pipeline ======
+
+No annotation file provided.
+Using dummy ground truth for demonstration.
+
+--- Creating Dummy Ground Truth (noise=5.0ms) ---
+Dummy GT S1 count   : 65
+Dummy GT S2 count   : 65
+
+=======================================================
+  EVALUATION REPORT: heart_sound.wav
+=======================================================
+
+--- Computing Accuracy for S1 ---
+Predictions         : 65
+Ground truth        : 65
+Mean accuracy       : 4.1344 ms (+/- 3.2823 ms)
+Good accuracy       : < 5ms error
+
+--- Computing Accuracy for S2 ---
+Predictions         : 65
+Ground truth        : 65
+Mean accuracy       : 4.1075 ms (+/- 2.6895 ms)
+Good accuracy       : < 5ms error
+
+--- Computing Sensitivity ---
+
+S1 Results:
+  TP                : 60
+  FN                : 5
+  Sensitivity       : 92.31%
+
+S2 Results:
+  TP                : 65
+  FN                : 0
+  Sensitivity       : 100.00%
+
+Overall Sensitivity : 96.15%
+Performance         : Good (>= 90%)
+
+--- Computing Segmentation Success ---
+Total candidates    : 209
+S1 identified       : 65
+S2 identified       : 65
+Complete pairs      : 65
+Coverage            : 62.2%
+Segmentation        : SUCCESS
+
+───────────────────────────────────────────────────────
+  COMPARISON WITH PAPER BENCHMARKS
+───────────────────────────────────────────────────────
+Metric                         Yours           Paper          
+───────────────────────────────────────────────────────
+S1 Accuracy (ms)               4.1344                     0.28
+S2 Accuracy (ms)               4.1075                     0.29
+Overall Sensitivity (%)        96.15                     97.44
+S1 Sensitivity (%)             92.31           97.22 (murmur present)
+S2 Sensitivity (%)             100.00          97.22 (murmur present)
+───────────────────────────────────────────────────────
+
+Dashboard saved as: segmentation_report_heart_sound.wav.png
+
+✅ Step 6 PASSED — report generated!
+
+FULL PIPELINE COMPLETE!
